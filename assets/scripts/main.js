@@ -90,7 +90,7 @@ function initFormHandler() {
 
     mainEle.append(recipeCard);
 
-    const recipeArray = JSON.parse(localStorage.getItem('recipes'));
+    let recipeArray = JSON.parse(localStorage.getItem('recipes'));
     if (recipeArray) { recipeArray.push(recipeObject); }
     else { recipeArray = [recipeObject]; }
     localStorage.setItem('recipes', JSON.stringify(recipeArray));
